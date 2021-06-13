@@ -11,7 +11,7 @@ pipeline {
     stage('Build JS') {
       agent {
         docker {
-          image 'maven:3.8.1-adoptopenjdk-11'
+          image 'node:14-alpine'
           args '-v tutorial_jenkins_frontend_modules:$WORKSPACE/node_modules'
         }
       }
